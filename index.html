@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #FF6F61, #4672af); /* Fondo degradado */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: #FFD700; /* Dorado */
+            font-size: 2.5rem; /* Tamaño responsivo */
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        p {
+            color: #FFF; /* Blanco */
+            font-size: 1.2rem; /* Tamaño responsivo */
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 80%; /* Imagen responsiva */
+            height: auto;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .container {
+            max-width: 90%; /* Contenedor responsivo */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .balloon {
+            width: 80px; /* Globos más pequeños en móviles */
+            height: 120px;
+            background-color: #FF6F61;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 2px;
+            height: 80px; /* Hilo más corto en móviles */
+            background-color: #333;
+        }
+
+        /* Animaciones */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            animation: confetti-fall 5s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Media Queries para diseño responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Título más pequeño en móviles */
+            }
+
+            p {
+                font-size: 1rem; /* Texto más pequeño en móviles */
+            }
+
+            img {
+                max-width: 90%; /* Imagen más grande en móviles */
+            }
+
+            .balloon {
+                width: 60px; /* Globos más pequeños en móviles */
+                height: 90px;
+            }
+
+            .balloon::before {
+                height: 60px; /* Hilo más corto en móviles */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem; /* Título aún más pequeño en móviles pequeños */
+            }
+
+            p {
+                font-size: 0.9rem; /* Texto aún más pequeño en móviles pequeños */
+            }
+
+            .container {
+                padding: 15px; /* Menos padding en móviles pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz Cumpleaños, Juan!</h1> <!-- Cambia "Juan" por el nombre de tu amigo -->
+        <p>Espero que tengas un día lleno de alegría, amor y muchas sorpresas.</p>
+        <p>¡Que todos tus deseos se hagan realidad!</p>
+        <img src="https://st.depositphotos.com/67903508/57663/i/450/depositphotos_576636496-stock-photo-closeup-cake-happy-birthday-topper.jpg" alt="Pastel de cumpleaños"> <!-- Cambia la URL por tu imagen -->
+        <div class="balloon"></div>
+        <div class="balloon" style="background-color: #6B5B95; animation-delay: 1s;"></div>
+        <div class="balloon" style="background-color: #88B04B; animation-delay: 2s;"></div>
+        <div class="balloon" style="background-color: #FFA500; animation-delay: 3s;"></div>
+        <p>Con cariño, Ya tu sabe quien soy 👅</p>
+
+        <!-- Reproductor de audio -->
+      
+    </div>
+
+    <!-- Confeti animado -->
+    <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="confetti" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="confetti" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="confetti" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="confetti" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="confetti" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="confetti" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="confetti" style="left: 80%; animation-delay: 7s;"></div>
+    <div class="confetti" style="left: 90%; animation-delay: 8s;"></div>
+</body>
+</html>
